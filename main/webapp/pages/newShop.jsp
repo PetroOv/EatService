@@ -32,7 +32,7 @@
           <p class="edit_point"><input class="photo" id="photoShop" type="file" accept="image/*" /></p>
           <p class="edit_point">Опис</p>
           <p class="edit_point"><input id="description"  type="text" placeholder="Додайте опис(місто,кухня,особливості)"></p>
-          <button id="submitAddShop" type="submit"><img src="img/send.png" height="64" width="128" /></button>
+          <button id="submitAddShop" type="submit">Додати</button>
         </form>
       </div>
     </div>

@@ -28,13 +28,13 @@
     <p>фотка</p>
     <p>ім'я</p>
     <p>email</p>
-     <p class="edit_point2" style="font-size: 20px">Додати власне кафе  <a href="newShop.jsp"><img src="img/plus.png" width="32" height="32" /></a></p>
+     <p id = "newCafeBot" style="font-size: 20px">Додати власне кафе  <a href="newShop.jsp"><img src="img/plus.png" width="32" height="32" /></a></p>
   </div>
 </div>
   <div class = rightbar style="padding-top: 100px">
     <div >
       <p > Ви ще не авторизувались?</p>
-      <a href = autorization.jsp> Увійти</a>
+      <a href =logIn.jsp> Увійти</a>
     </div>
 
 

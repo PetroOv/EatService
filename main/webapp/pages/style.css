@@ -8,7 +8,21 @@ h2 {
     font-size: 32px;
     text-align:center;
 }
-
+#signUplink{
+    /*vertical-align: top;*/
+    /*text-align: right;*/
+    margin-left: 0px;
+    margin-top:20px;
+    position: absolute;
+}
+#submitAddShop{
+    font-size:16px;
+    border: groove;
+    /*text-align: left;*/
+    transition: 0.5s;
+    position: relative;
+    right: 8%;
+}
 .button {
 
     position: absolute;
@@ -32,13 +46,24 @@ h2 {
     font-size: 18px;
     font-weight: bold;
     text-align: left;
-    margin-left: 40%;
+    margin-left: 30%;
+    /*position: static;*/
 }
 .edit_point2 {
     font-size: 18px;
     font-weight: bold;
     text-align: right;
 
+}
+#newCafeBot{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 44px;
+    /*border: groove;*/
+    height: 20px;
+    width: auto;
+    position: relative;
 }
 
 .centralbar {
@@ -66,9 +91,10 @@ h2 {
 }
 #submitInfo{
     border: groove;
-    text-align: left;
+    /*text-align: left;*/
     transition: 0.5s;
     position: relative;
+    right: 2%;
 }
 #submitAddUser{
     border: groove;
