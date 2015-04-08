@@ -28,7 +28,7 @@
     <p>фотка</p>
     <p>ім'я</p>
     <p>email</p>
-     <p style="font-size: 20px">Додати власне кафе  <a href="newShop.jsp"><img src="img/plus.png" width="32" height="32" /></a></p>
+     <p class="edit_point2" style="font-size: 20px">Додати власне кафе  <a href="newShop.jsp"><img src="img/plus.png" width="32" height="32" /></a></p>
   </div>
 </div>
   <div class = rightbar style="padding-top: 100px">

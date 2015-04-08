@@ -17,7 +17,7 @@
   <div class="centralbar">
 
     <h2><b>Реєстрація</b></h2>
-    <br>
+
     <form action="" style="align-text: center">
       <p class="edit_point">Логін</p>
       <p class="edit_point"><input id="userName"  type="text" placeholder="Введіть бажаний логін" required></p>
@@ -29,7 +29,7 @@
       <p class="edit_point"><input id="name"  type="text" placeholder="Введіть своє ім'я"></p>
       <p class="edit_point">Фото</p>
       <p class="edit_point"><input class="photo" id="photoUser" type="file" accept="image/*" size = "50px" /></p>
-      <p class="edit_point"><button  id="submitAddUser" type="submit"><p >Зареєструватись</p></button></p>
+      <button  id="submitAddUser" type="submit"><p >Зареєструватись</p></button>
     </form>
   </div>
 </div>

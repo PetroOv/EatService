@@ -22,9 +22,9 @@
           <p class="edit_point"><input id="userName"  type="text" placeholder="Введіть логін" required></p>
           <p class="edit_point">Пароль</p>
           <p class="edit_point"><input id="password"  type="text" placeholder="Введіть пароль"></p>
-          <button id="submitInfo" type="submit"><p>Авторизуватися</p></button>
+          <button id="submitInfo" type="submit"><p>Авторизуватися</p ></button>
         </form>
-        <p  class="edit_point" style="font-size: 20px;">Зареєтруватися:  <a href="signUp.jsp"><img src="img/signup_icon.png" width="32" height="32"  /></a></p>
+        <p  class="edit_point2" style="font-size: 20px;">Зареєтруватися:  <a href="signUp.jsp"><img src="img/signup_icon.png" width="32" height="32"  /></a></p>
       </div>
     </div>
 
