@@ -15,5 +15,11 @@
       </ul>
     </nav>
 
+    <div class="context">
+        <div class="centralbar">
+            <h2 ><b>етальна інформація про кафе</b></h2>
+
+        </div>
+    </div>
 </body>
 </html>

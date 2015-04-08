@@ -21,19 +21,22 @@
 
       </ul>
     </nav>
-    <form style=": center; margin-left: 200px" >
-      <h2>Add shop</h2>
-      <br>
-      <form action="" style="align-text: center">
-        <p>Назва</p>
-        <p><input id="shopName"  type="text" placeholder="Введіть назву кафе" required></p>
-        <p>Фото</p>
-        <p><input class="photo" id="photoShop" type="file" accept="image/*" /></p>
-        <p>Опис</p>
-        <p><input id="description"  type="text" placeholder="Додайте опис(місто,кухня,особливості)"></p>
-        <button id="submitAddShop" type="submit"><p>Send</p></button>
-      </form>
-    </form>
+    <div class="context">
+      <div class="centralbar">
+        <h2>Введіть інформацію про кафе</h2>
+        <br>
+        <form action="" style="align-text: center">
+          <p class="edit_point">Назва</p>
+          <p class="edit_point"><input id="shopName"  type="text" placeholder="Введіть назву кафе" required></p>
+          <p class="edit_point">Фото</p>
+          <p class="edit_point"><input class="photo" id="photoShop" type="file" accept="image/*" /></p>
+          <p class="edit_point">Опис</p>
+          <p class="edit_point"><input id="description"  type="text" placeholder="Додайте опис(місто,кухня,особливості)"></p>
+          <p class="edit_point"> <button id="submitAddShop" type="submit"><p>Send</p></button></p>
+        </form>
+      </div>
+    </div>
+
 
   </body>
 </html>

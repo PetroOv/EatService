@@ -1,30 +1,25 @@
-package com.project.dao;
+package com.project.logic.dao;
 
-import com.project.businesslogic.users.SimpleUser;
+import com.project.logic.Manager;
 import com.project.utils.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import java.util.List;
+
 /**
- * Created by Oleksandr on 4/4/2015.
+ * Created by Oleksandr on 4/7/2015.
  */
-public class SimpleUserDAO implements CRUD<SimpleUser> {
-    public static void main(String[] args) {
-        SimpleUserDAO simpleUserDAO = new SimpleUserDAO();
-        SimpleUser simpleUser = new SimpleUser();
-        simpleUser.setName("sasha");
-        simpleUser.setEmail("asdasd@kubfhkdsj.com");
-        simpleUser.setPassword("qwerty");
-        simpleUserDAO.create(simpleUser);
-    }
+public class ManagerDAO implements CRUD<Manager> {
 
     private SessionFactory sessionFactory;
-    SimpleUserDAO(){
+    ManagerDAO(){
         this.sessionFactory = HibernateUtil.getSessionFactory();
     }
+
     @Override
-    public Long create(SimpleUser object) {
+    public Long create(Manager object) {
         Session session = sessionFactory.openSession();
         try {
             session.getTransaction().begin();
@@ -42,35 +37,66 @@ public class SimpleUserDAO implements CRUD<SimpleUser> {
     }
 
     @Override
-    public SimpleUser get(Long id) {
+    public Manager get(Long id) {
         Session session = sessionFactory.openSession();
+        Manager managerUser = null;
         try {
             session.getTransaction().begin();
-
+            managerUser = (Manager) session.get(Manager.class, id);
             session.getTransaction().commit();
         }catch (HibernateException e){
             e.printStackTrace();
             session.getTransaction().rollback();
+        }
+        finally {
+            session.close();
+        }
+        return managerUser;
+    }
+
+    @Override
+    public void update(Manager object) {
+        Session session = sessionFactory.openSession();
+        try {
+            session.getTransaction().begin();
+            session.merge(object);
+            session.getTransaction().commit();
+        }catch (HibernateException e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public void delete(Manager object) {
+        Session session = sessionFactory.openSession();
+        try {
+            session.getTransaction().begin();
+            session.delete(object);
+            session.getTransaction().commit();
+        }catch (HibernateException e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public List<Manager> getAll() {
+        Session session = sessionFactory.openSession();
+        try {
+            return session.createCriteria(Manager.class).list();
+        }catch (HibernateException e){
+            e.printStackTrace();
+        }
+        finally {
+            session.close();
         }
         return null;
-    }
-
-    @Override
-    public void update(SimpleUser object) {
-        Session session = sessionFactory.openSession();
-        try {
-            session.getTransaction().begin();
-
-            session.getTransaction().commit();
-        }catch (HibernateException e){
-            e.printStackTrace();
-            session.getTransaction().rollback();
-        }
-
-    }
-
-    @Override
-    public void delete(SimpleUser object) {
-
     }
 }

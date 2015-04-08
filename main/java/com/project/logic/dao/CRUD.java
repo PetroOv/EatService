@@ -1,4 +1,4 @@
-package com.project.businesslogic.DAO;
+package com.project.logic.dao;
 
 import java.util.List;
 

@@ -1,7 +1,6 @@
 package com.project.logic;
 
 
-import com.project.logic.*;
 
 import javax.persistence.*;
 import javax.persistence.Table;

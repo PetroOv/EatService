@@ -21,6 +21,11 @@
 
   </ul>
 </nav>
-<p>Кафе на будь-який вибір</p>
+<div class="context">
+    <div class="centralbar">
+        <h2 style="color:#009ACD;font-size: 32px;text-align:center"><b>Кафе на будь-який вибір</b></h2>
+
+    </div>
+</div>
 </body>
 </html>

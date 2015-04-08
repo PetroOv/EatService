@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8f">
         <link href="style.css" rel="stylesheet" type="text/css">
-
+        <title> Головна сторінка</title>
     </head>
     <body>
         <nav class = "nav-primary" role = "navigation">
@@ -15,15 +15,22 @@
             </ul>
         </nav>
 
-        <form style ="text-align: center; margin-left: 50px ">
-            <h2 style="color:cyan;font-size: 32px"><b>Вас вітає команда EatService.</b></h2>
-            <p>Тут ви зможете знайти кафе на будь-який смак,а також додати інформацію про власний заклад</p>
-        </form>
+        <div class="context">
+            <div class="centralbar">
+                <h2 ><b>Вас вітає команда EatService.</b></h2>
+                <p>Тут ви зможете знайти кафе на будь-який смак,а також додати інформацію про власний заклад</p>
+            </div>
+        </div>
 
-        <form style="text-align: right; vertical-align: bottom; margin-right: 50px" action="home.html">
-            <button class="button">Click!</button>
-            <input type="text" value="Null">
-            <input type="submit">
-        </form>
+        <%--<form style ="text-align: center; margin-left: 50px ">--%>
+            <%--<h2 style="color:cyan;font-size: 32px"><b>Вас вітає команда EatService.</b></h2>--%>
+            <%--<p>Тут ви зможете знайти кафе на будь-який смак,а також додати інформацію про власний заклад</p>--%>
+        <%--</form>--%>
+
+        <%--<form style="text-align: right; vertical-align: bottom; margin-right: 50px" action="home.html">--%>
+            <%--<button class="button">Click!</button>--%>
+            <%--<input type="text" value="Null">--%>
+            <%--<input type="submit">--%>
+        <%--</form>--%>
     </body>
 </html>

@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: petro_000
@@ -21,26 +22,22 @@
 
   </ul>
 </nav>
-<h1 style="text-align: center;font-size: 32px;font-family: Arial">Профіль користувача    </h1>
-<br>
-<p>фотка</p>
-<p>ім'я</p>
-<p>email</p>
-<form style="text-align: right; vertical-align: top; margin-right: 100px" action="newShop.jsp">
-  <button class="button">Додати нове кафе!</button>
-
-</form>
-
-<br><br>
-<br>
-<br>
-<br>
-  <form style="text-align:right; vertical-align:bottom;font-size: 20px;font-family: Arial">
-    <form style="text-align:left;float:left;">
+<div class="context">
+  <div class="centralbar">
+    <h2 ><b>Профіль користувача: getLogin</b></h2>
+    <p>фотка</p>
+    <p>ім'я</p>
+    <p>email</p>
+     <p style="font-size: 20px">Додати власне кафе  <a href="newShop.jsp"><img src="img/plus.png" width="32" height="32" /></a></p>
+  </div>
+</div>
+  <div class = rightbar style="padding-top: 100px">
+    <div >
       <p > Ви ще не авторизувались?</p>
       <a href = autorization.jsp> Увійти</a>
-    </form>
+    </div>
 
-  </form>
+
+  </div>
 </body>
 </html>

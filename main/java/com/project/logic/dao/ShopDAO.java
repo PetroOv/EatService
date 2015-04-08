@@ -1,4 +1,4 @@
-package com.project.businesslogic.DAO;
+package com.project.logic.dao;
 
 import com.project.logic.Shop;
 import com.project.utils.HibernateUtil;

@@ -1,6 +1,6 @@
-package com.project.businesslogic.DAO;
+package com.project.logic.dao;
 
-import com.project.logic.Manager;
+import com.project.logic.Dish;
 import com.project.utils.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -11,21 +11,20 @@ import java.util.List;
 /**
  * Created by Oleksandr on 4/7/2015.
  */
-public class ManagerDAO implements CRUD<Manager> {
-
+public class DishDAO implements CRUD<Dish> {
     private SessionFactory sessionFactory;
-    ManagerDAO(){
+    DishDAO(){
         this.sessionFactory = HibernateUtil.getSessionFactory();
     }
 
     @Override
-    public Long create(Manager object) {
+    public Long create(Dish object) {
         Session session = sessionFactory.openSession();
         try {
             session.getTransaction().begin();
             session.persist(object);
             session.getTransaction().commit();
-            return object.getId();
+            return Long.valueOf(object.getId());
         }catch (HibernateException e){
             e.printStackTrace();
             session.getTransaction().rollback();
@@ -37,12 +36,12 @@ public class ManagerDAO implements CRUD<Manager> {
     }
 
     @Override
-    public Manager get(Long id) {
+    public Dish get(Long id) {
         Session session = sessionFactory.openSession();
-        Manager managerUser = null;
+        Dish dish = null;
         try {
             session.getTransaction().begin();
-            managerUser = (Manager) session.get(Manager.class, id);
+            dish = (Dish) session.get(Dish.class, id);
             session.getTransaction().commit();
         }catch (HibernateException e){
             e.printStackTrace();
@@ -51,11 +50,11 @@ public class ManagerDAO implements CRUD<Manager> {
         finally {
             session.close();
         }
-        return managerUser;
+        return dish;
     }
 
     @Override
-    public void update(Manager object) {
+    public void update(Dish object) {
         Session session = sessionFactory.openSession();
         try {
             session.getTransaction().begin();
@@ -71,7 +70,7 @@ public class ManagerDAO implements CRUD<Manager> {
     }
 
     @Override
-    public void delete(Manager object) {
+    public void delete(Dish object) {
         Session session = sessionFactory.openSession();
         try {
             session.getTransaction().begin();
@@ -87,10 +86,10 @@ public class ManagerDAO implements CRUD<Manager> {
     }
 
     @Override
-    public List<Manager> getAll() {
+    public List<Dish> getAll() {
         Session session = sessionFactory.openSession();
         try {
-            return session.createCriteria(Manager.class).list();
+            return session.createCriteria(Dish.class).list();
         }catch (HibernateException e){
             e.printStackTrace();
         }

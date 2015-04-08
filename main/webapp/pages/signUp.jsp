@@ -13,23 +13,27 @@
     <li role = "presentation"><a href = "profile.jsp" role = "menuitem">Профіль</a></li>
 
   </ul>
-</nav>
-<h2>Реєстрація</h2>
-<br>
-<form action="" style="align-text: center">
-  <p>Логін</p>
-  <p><input id="userName"  type="text" placeholder="Введіть бажаний логін" required></p>
-  <p>Пароль</p>
-  <p><input id="password"  type="text" placeholder="Введіть свій пароль"></p>
-  <p>Емейл</p>
-  <p><input id="email"  type="text" placeholder="Введіть свій email"></p>
-  <p>Справжнє ім'я</p>
-  <p><input id="name"  type="text" placeholder="Введіть своє ім'я"></p>
-  <p>Фото</p>
-  <p><input class="photo" id="photoUser" type="file" accept="image/*" /></p>
+</nav> <div class="context">
+  <div class="centralbar">
 
-  <button id="submitAddShop" type="submit"><p>Реєстрація</p></button>
-</form>
+    <h2><b>Реєстрація</b></h2>
+    <br>
+    <form action="" style="align-text: center">
+      <p class="edit_point">Логін</p>
+      <p class="edit_point"><input id="userName"  type="text" placeholder="Введіть бажаний логін" required></p>
+      <p class="edit_point">Пароль</p>
+      <p class="edit_point"><input id="password"  type="text" placeholder="Введіть свій пароль"></p>
+      <p class="edit_point">Емейл</p>
+      <p class="edit_point"><input id="email"  type="text" placeholder="Введіть свій email"></p>
+      <p class="edit_point">Справжнє ім'я</p>
+      <p class="edit_point"><input id="name"  type="text" placeholder="Введіть своє ім'я"></p>
+      <p class="edit_point">Фото</p>
+      <p class="edit_point"><input class="photo" id="photoUser" type="file" accept="image/*" size = "50px" /></p>
+      <p class="edit_point"><button  id="submitAddUser" type="submit"><p >Зареєструватись</p></button></p>
+    </form>
+  </div>
+</div>
+
 
 
 </body>

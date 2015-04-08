@@ -1,6 +1,6 @@
-package com.project.businesslogic.DAO;
+package com.project.logic.dao;
 
-import com.project.logic.Dish;
+import com.project.logic.Photo;
 import com.project.utils.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -11,14 +11,14 @@ import java.util.List;
 /**
  * Created by Oleksandr on 4/7/2015.
  */
-public class DishDAO implements CRUD<Dish> {
+public class PhotoDAO implements CRUD<Photo> {
     private SessionFactory sessionFactory;
-    DishDAO(){
+    PhotoDAO(){
         this.sessionFactory = HibernateUtil.getSessionFactory();
     }
 
     @Override
-    public Long create(Dish object) {
+    public Long create(Photo object) {
         Session session = sessionFactory.openSession();
         try {
             session.getTransaction().begin();
@@ -36,12 +36,12 @@ public class DishDAO implements CRUD<Dish> {
     }
 
     @Override
-    public Dish get(Long id) {
+    public Photo get(Long id) {
         Session session = sessionFactory.openSession();
-        Dish dish = null;
+        Photo photo = null;
         try {
             session.getTransaction().begin();
-            dish = (Dish) session.get(Dish.class, id);
+            photo = (Photo) session.get(Photo.class, id);
             session.getTransaction().commit();
         }catch (HibernateException e){
             e.printStackTrace();
@@ -50,11 +50,11 @@ public class DishDAO implements CRUD<Dish> {
         finally {
             session.close();
         }
-        return dish;
+        return photo;
     }
 
     @Override
-    public void update(Dish object) {
+    public void update(Photo object) {
         Session session = sessionFactory.openSession();
         try {
             session.getTransaction().begin();
@@ -70,7 +70,7 @@ public class DishDAO implements CRUD<Dish> {
     }
 
     @Override
-    public void delete(Dish object) {
+    public void delete(Photo object) {
         Session session = sessionFactory.openSession();
         try {
             session.getTransaction().begin();
@@ -86,10 +86,10 @@ public class DishDAO implements CRUD<Dish> {
     }
 
     @Override
-    public List<Dish> getAll() {
+    public List<Photo> getAll() {
         Session session = sessionFactory.openSession();
         try {
-            return session.createCriteria(Dish.class).list();
+            return session.createCriteria(Photo.class).list();
         }catch (HibernateException e){
             e.printStackTrace();
         }
