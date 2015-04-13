@@ -17,7 +17,12 @@
 
     <div class="context">
         <div class="centralbar">
-            <h2 ><b>етальна інформація про кафе</b></h2>
+            <div class="buttonLogOut" >
+                <a href="newDish.jsp" type="text" title="Додати новe блюдо"  ><img src="img/plus.png" width="32" height="32" /></a>
+                </div>
+            <h2 ><b>Детальна інформація про кафе</b></h2>
+
+            <br>
 
         </div>
     </div>
